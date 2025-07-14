@@ -18,6 +18,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    margin: 0;
 }
 
 .card{
@@ -27,13 +28,11 @@ body{
     align-items: center;
     border-radius: 8px;
     width: 90%;
-    overflow: hidden;
     gap: 8px ;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-block: 20px;
 }
 
-.card-avatar-jessica-image {
+.card-avatar {
     border-radius: 100%;
     height: 64px;
     width: 64px;
@@ -66,14 +65,14 @@ body{
     font-size: 12px;
 }
 
-.card-buttons{
+.card-links{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
     width: 85%;
 }
 
-a{
+.card-link{
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -86,11 +85,19 @@ a{
     transition: background-color .5s;
 }
 
-a:active{
+.card-link:hover{
+    /* opacity: .4; */
+    background-color: hsla(0, 0%, 20%, 0.39);
+}
+
+.card-link:active{
     background-color: var(--Green);
     color: black;
 }
 
-a:hover{
-    background-color: hsla(0, 0%, 20%, 0.39);
+@media (width > 375px) {
+    
+    .card{
+        width: 320px;
+    }
 }
